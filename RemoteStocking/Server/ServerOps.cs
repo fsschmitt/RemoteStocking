@@ -180,5 +180,33 @@ namespace Server
             }
             return stocks;
         }
+
+        // Get all stocks to a given client id
+        public List<Stock> GetAllStocksByClient(int IDClient)
+        {
+            SqlConnection conn = new SqlConnection(connString);
+            List<Stock> stocks = new List<Stock>();
+            try
+            {
+                conn.Open();
+                string date = getSQLFormatDateNow();
+                string sqlcmd = "SELECT * FROM StockTransaction WHERE IDClient=" + IDClient + ";";
+                SqlCommand cmd = new SqlCommand(sqlcmd, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    stocks.Add(getStockFromReader(reader));
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return stocks;
+        }
     }
 }

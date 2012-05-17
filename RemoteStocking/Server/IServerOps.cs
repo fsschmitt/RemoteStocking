@@ -27,5 +27,8 @@ namespace Server
         [OperationContract]
         List<Stock> GetAllWaitingStock();
 
+        [OperationContract]
+        List<Stock> GetAllStocksByClient(int IDClient);
+
     }
 }

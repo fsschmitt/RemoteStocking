@@ -29,6 +29,9 @@ namespace Client.ServerOps {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/GetAllWaitingStock", ReplyAction="http://tempuri.org/IServerOps/GetAllWaitingStockResponse")]
         Stock[] GetAllWaitingStock();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/GetAllStocksByClient", ReplyAction="http://tempuri.org/IServerOps/GetAllStocksByClientResponse")]
+        Stock[] GetAllStocksByClient(int IDClient);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -76,6 +79,10 @@ namespace Client.ServerOps {
         
         public Stock[] GetAllWaitingStock() {
             return base.Channel.GetAllWaitingStock();
+        }
+        
+        public Stock[] GetAllStocksByClient(int IDClient) {
+            return base.Channel.GetAllStocksByClient(IDClient);
         }
     }
 }
