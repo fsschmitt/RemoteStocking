@@ -16,5 +16,8 @@ namespace Server
 
         [OperationContract]
         string GetEmail(int id);
+
+        [OperationContract]
+        string AddStock(Stock stock);
     }
 }

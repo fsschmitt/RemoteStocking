@@ -8,6 +8,7 @@ namespace Server
 {
     class Program
     {
+        public static bool Debug = true;
         static void Main(string[] args)
         {
             Console.WriteLine("Server Initializing");

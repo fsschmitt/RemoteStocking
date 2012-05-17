@@ -20,6 +20,9 @@ namespace Client.ServerOps {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/GetEmail", ReplyAction="http://tempuri.org/IServerOps/GetEmailResponse")]
         string GetEmail(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/AddStock", ReplyAction="http://tempuri.org/IServerOps/AddStockResponse")]
+        string AddStock(Stock stock);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +58,10 @@ namespace Client.ServerOps {
         
         public string GetEmail(int id) {
             return base.Channel.GetEmail(id);
+        }
+        
+        public string AddStock(Stock stock) {
+            return base.Channel.AddStock(stock);
         }
     }
 }
