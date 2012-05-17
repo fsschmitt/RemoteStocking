@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\Stock.datasource" />
     <None Include="Service References\ServerOps\item.xsd">
       <SubType>Designer</SubType>
     </None>

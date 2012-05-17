@@ -15,14 +15,20 @@ namespace Client.ServerOps {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServerOps.IServerOps")]
     public interface IServerOps {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/DoWork", ReplyAction="http://tempuri.org/IServerOps/DoWorkResponse")]
-        int DoWork(int num);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/GetEmail", ReplyAction="http://tempuri.org/IServerOps/GetEmailResponse")]
-        string GetEmail(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/GetEmailTransaction", ReplyAction="http://tempuri.org/IServerOps/GetEmailTransactionResponse")]
+        string GetEmailTransaction(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/AddStock", ReplyAction="http://tempuri.org/IServerOps/AddStockResponse")]
         string AddStock(Stock stock);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/IsExecuted", ReplyAction="http://tempuri.org/IServerOps/IsExecutedResponse")]
+        bool IsExecuted(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/ChangeStockRate", ReplyAction="http://tempuri.org/IServerOps/ChangeStockRateResponse")]
+        string ChangeStockRate(int id, double rate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/GetAllWaitingStock", ReplyAction="http://tempuri.org/IServerOps/GetAllWaitingStockResponse")]
+        Stock[] GetAllWaitingStock();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -52,16 +58,24 @@ namespace Client.ServerOps {
                 base(binding, remoteAddress) {
         }
         
-        public int DoWork(int num) {
-            return base.Channel.DoWork(num);
-        }
-        
-        public string GetEmail(int id) {
-            return base.Channel.GetEmail(id);
+        public string GetEmailTransaction(int id) {
+            return base.Channel.GetEmailTransaction(id);
         }
         
         public string AddStock(Stock stock) {
             return base.Channel.AddStock(stock);
+        }
+        
+        public bool IsExecuted(int id) {
+            return base.Channel.IsExecuted(id);
+        }
+        
+        public string ChangeStockRate(int id, double rate) {
+            return base.Channel.ChangeStockRate(id, rate);
+        }
+        
+        public Stock[] GetAllWaitingStock() {
+            return base.Channel.GetAllWaitingStock();
         }
     }
 }

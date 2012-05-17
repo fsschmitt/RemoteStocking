@@ -11,13 +11,21 @@ namespace Server
     [ServiceContract]
     public interface IServerOps
     {
-        [OperationContract]
-        int DoWork(int num);
 
         [OperationContract]
-        string GetEmail(int id);
+        string GetEmailTransaction(int id);
 
         [OperationContract]
         string AddStock(Stock stock);
+
+        [OperationContract]
+        bool IsExecuted(int id);
+
+        [OperationContract]
+        string ChangeStockRate(int id, double rate);
+
+        [OperationContract]
+        List<Stock> GetAllWaitingStock();
+
     }
 }

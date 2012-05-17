@@ -13,6 +13,9 @@ public class Stock
     }
 
     [DataMember]
+    public int id { get; set; }
+
+    [DataMember]
     public int client { get; set; }
 
     [DataMember]
@@ -34,12 +37,9 @@ public class Stock
     public double price { get; set; }
 
     [DataMember]
-    public double opPrice { get; set; }
-
-    [DataMember]
     public bool executed { get; set; }
 
-    public Stock(int c, String e, transactionType t, int q, string st, DateTime ti, double p, double op, bool ex)
+    public Stock(int c, String e, transactionType t, int q, string st, DateTime ti, double p, bool ex)
     {
         this.client = c;
         this.email = e;
@@ -48,8 +48,25 @@ public class Stock
         this.sType = st;
         this.time = ti;
         this.price = p;
-        this.opPrice = op;
         this.executed = ex;
     }
 
+    public Stock(int id, int c, String e, transactionType t, int q, string st, DateTime ti, double p, bool ex)
+    {
+        this.id = id;
+        this.client = c;
+        this.email = e;
+        this.type = t;
+        this.quantity = q;
+        this.sType = st;
+        this.time = ti;
+        this.price = p;
+        this.executed = ex;
+    }
+
+    override
+    public string ToString()
+    {
+        return "----------\nClient: " + client + "\nShare: " + sType + "\nRate: " + price + "\n----------";
+    }
 }
