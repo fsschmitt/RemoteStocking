@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Remote Stocking WebSite</title>
+    <title>Remote Stocks WebSite</title>
 
     <link rel="stylesheet" href="stylesheets/foundation.css">
 	<link rel="stylesheet" href="stylesheets/app.css">
@@ -29,7 +29,7 @@
     <div id="container">
         <div class="header">
         	<ul class="breadcrumbs">
-        		<div class="logo"> <img class="logo-pic" src="/images/stocks-small.png"/> Remote Stocking</div>
+        		<div class="logo"> <img class="logo-pic" src="/images/stocks-small.png"/> Remote Stocks</div>
         	</ul>
         </div>
         <div class="line"></div>
