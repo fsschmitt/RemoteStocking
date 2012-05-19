@@ -76,6 +76,9 @@
     <None Include="Service References\ServerOps\item2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServerOps\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ServerOps\ServerOps.wsdl" />
   </ItemGroup>
   <ItemGroup>

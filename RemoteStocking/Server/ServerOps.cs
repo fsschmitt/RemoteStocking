@@ -208,5 +208,17 @@ namespace Server
             }
             return stocks;
         }
+
+        // Get all shares type
+        public List<String> GetAllSharesType()
+        {
+            return new List<String> {
+            "Apple",
+            "IBM",
+            "Microsoft",
+            "Toshiba",
+            "LG",
+            "Google"};
+        }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Client.ServerOps {
+namespace WebSite.ServerOps {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -38,12 +38,12 @@ namespace Client.ServerOps {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServerOpsChannel : Client.ServerOps.IServerOps, System.ServiceModel.IClientChannel {
+    public interface IServerOpsChannel : WebSite.ServerOps.IServerOps, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServerOpsClient : System.ServiceModel.ClientBase<Client.ServerOps.IServerOps>, Client.ServerOps.IServerOps {
+    public partial class ServerOpsClient : System.ServiceModel.ClientBase<WebSite.ServerOps.IServerOps>, WebSite.ServerOps.IServerOps {
         
         public ServerOpsClient() {
         }

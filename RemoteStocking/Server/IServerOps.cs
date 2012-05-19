@@ -30,5 +30,7 @@ namespace Server
         [OperationContract]
         List<Stock> GetAllStocksByClient(int IDClient);
 
+        [OperationContract]
+        List<String> GetAllSharesType();
     }
 }

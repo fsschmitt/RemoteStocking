@@ -136,13 +136,7 @@
             // cbShareType
             // 
             this.cbShareType.FormattingEnabled = true;
-            this.cbShareType.Items.AddRange(new object[] {
-            "Apple",
-            "IBM",
-            "Microsoft",
-            "Toshiba",
-            "LG",
-            "Google"});
+            
             this.cbShareType.Location = new System.Drawing.Point(10, 104);
             this.cbShareType.Name = "cbShareType";
             this.cbShareType.Size = new System.Drawing.Size(132, 21);

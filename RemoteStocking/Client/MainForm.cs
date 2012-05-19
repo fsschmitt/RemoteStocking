@@ -17,7 +17,9 @@ namespace Client
             proxy = new ServerOps.ServerOpsClient();
             InitializeComponent();
             cbType.SelectedIndex = 0;
+            cbShareType.Items.AddRange(proxy.GetAllSharesType());
             cbShareType.SelectedIndex = 0;
+            
         }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
@@ -59,7 +61,7 @@ namespace Client
             Stock[] stocks = proxy.GetAllStocksByClient(Convert.ToInt32(txtSearch.Text));
             foreach (Stock s in stocks)
             {
-                lbSearch.Items.Add(s.sType + "[" + s.quantity + "]" + " - " + s.executed);
+                lbSearch.Items.Add(s.ToString());
             }
         }
 

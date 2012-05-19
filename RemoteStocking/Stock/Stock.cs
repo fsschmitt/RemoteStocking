@@ -67,6 +67,6 @@ public class Stock
     override
     public string ToString()
     {
-        return "----------\nClient: " + client + "\nShare: " + sType + "\nRate: " + price + "\n----------";
+        return "Share: " + sType + " | rate: " + price + " | quantity: " + quantity;
     }
 }
