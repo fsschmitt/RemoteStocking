@@ -67,11 +67,10 @@ namespace Server
             try
             {
                 conn.Open();
-                int transactionID = stock.GetHashCode();
                 string date = getSQLFormatDateNow();
                 /* Create the insert query */
-                string sqlcmd = "insert into StockTransaction (IDTransaction,IDClient,Email,Quantity,ShareType,ActionType,TransactionTime,Rate,Executed)";
-                sqlcmd += "values (" + transactionID + "," + "'" + stock.client + "'" + "," + "'" + stock.email + "'" + "," + stock.quantity + ",";
+                string sqlcmd = "insert into StockTransaction (IDClient,Email,Quantity,ShareType,ActionType,TransactionTime,Rate,Executed)";
+                sqlcmd += "values (" + "'" + stock.client + "'" + "," + "'" + stock.email + "'" + "," + stock.quantity + ",";
                 sqlcmd += "'" + stock.sType + "'" + "," + ((int)stock.type) + "," + "'" + date + "'" + "," + stock.price + ",";
                 if (stock.executed)
                     sqlcmd += 1 + ");";
