@@ -51,17 +51,47 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerOps.cs" />
+    <Compile Include="Service References\StockBroker\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\StockBroker\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StockBroker\StockBrokerOps.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stock\Stock.csproj">
       <Project>{0256539C-C12F-4B2E-9327-03F6FE7D50F8}</Project>
       <Name>Stock</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\StockBroker\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StockBroker\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StockBroker\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StockBroker\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StockBroker\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
