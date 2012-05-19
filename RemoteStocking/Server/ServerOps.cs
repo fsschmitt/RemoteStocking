@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Net.Mail;
 
 namespace Server
 {
@@ -13,7 +14,6 @@ namespace Server
     [DataContract]
     public class ServerOps : IServerOps
     {
-
         private static string getSQLFormatDateNow()
         {
             return String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
@@ -219,6 +219,31 @@ namespace Server
             "Toshiba",
             "LG",
             "Google"};
+        }
+
+        // Send e-mail
+        public void SendEmail(Stock stock)
+        {
+            MailMessage m = new MailMessage();
+            SmtpClient sc = new SmtpClient();
+
+            m.From = new MailAddress("remote.stocks@gmail.com", "Remote Stocks");
+            m.To.Add(new MailAddress(stock.email, ""));
+            m.Subject = "The "+ stock.sType + " stock has been executed!" ;
+            m.Body = "\n\nThe "+ stock.sType + " stock has been executed, stock full description are the following:";
+            m.Body += "\n\n\nType: "+stock.sType; 
+            m.Body += "\nAction: "+stock.type;
+            m.Body += "\nQuantity: "+stock.quantity;
+            m.Body += "\nPrice: "+stock.price;
+            m.Body += "\nTotal cost: "+ (stock.price*stock.quantity);
+            m.Body += "\n\nBest regards,\nRemote Stocks Team";
+
+            sc.Host = "smtp.gmail.com";
+            sc.Port = 587;
+            sc.Credentials = new
+            System.Net.NetworkCredential("remote.stocks@gmail.com","remotestockstdin");
+            sc.EnableSsl = true;
+            sc.Send(m);
         }
     }
 }
