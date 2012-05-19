@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="stylesheets/foundation.css">
 	<link rel="stylesheet" href="stylesheets/app.css">
     <script src="javascripts/modernizr.foundation.js"></script>
+    <link REL="SHORTCUT ICON" HREF="images/stocks-small.ico">
     <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
     <script type="text/javascript">
         function doCheck(field) {

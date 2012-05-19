@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelLeft = new System.Windows.Forms.Panel();
             this.btnAddStock = new System.Windows.Forms.Button();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -43,16 +45,23 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblIDClient = new System.Windows.Forms.Label();
             this.txtIDClient = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lbSearch = new System.Windows.Forms.ListBox();
             this.lblSearch = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -64,18 +73,28 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.PanelLeft);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splitContainer1.Panel2.Controls.Add(this.btnSearch);
-            this.splitContainer1.Panel2.Controls.Add(this.lbSearch);
-            this.splitContainer1.Panel2.Controls.Add(this.lblSearch);
-            this.splitContainer1.Panel2.Controls.Add(this.txtSearch);
-            this.splitContainer1.Size = new System.Drawing.Size(636, 230);
-            this.splitContainer1.SplitterDistance = 297;
+            this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.panel1);
+            this.splitContainer1.Size = new System.Drawing.Size(673, 314);
+            this.splitContainer1.SplitterDistance = 314;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(67, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Add new stocks!";
             // 
             // PanelLeft
             // 
@@ -92,7 +111,7 @@
             this.PanelLeft.Controls.Add(this.txtEmail);
             this.PanelLeft.Controls.Add(this.lblIDClient);
             this.PanelLeft.Controls.Add(this.txtIDClient);
-            this.PanelLeft.Location = new System.Drawing.Point(3, 12);
+            this.PanelLeft.Location = new System.Drawing.Point(12, 103);
             this.PanelLeft.Name = "PanelLeft";
             this.PanelLeft.Size = new System.Drawing.Size(291, 206);
             this.PanelLeft.TabIndex = 1;
@@ -136,7 +155,6 @@
             // cbShareType
             // 
             this.cbShareType.FormattingEnabled = true;
-            
             this.cbShareType.Location = new System.Drawing.Point(10, 104);
             this.cbShareType.Name = "cbShareType";
             this.cbShareType.Size = new System.Drawing.Size(132, 21);
@@ -216,20 +234,30 @@
             this.txtIDClient.TabIndex = 0;
             this.txtIDClient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDClient_KeyPress);
             // 
-            // btnSearch
+            // label2
             // 
-            this.btnSearch.Location = new System.Drawing.Point(213, 38);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(110, 33);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "History";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(113, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "See your stocks!";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbSearch);
+            this.panel1.Controls.Add(this.lblSearch);
+            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Controls.Add(this.txtSearch);
+            this.panel1.Location = new System.Drawing.Point(6, 105);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(346, 204);
+            this.panel1.TabIndex = 4;
             // 
             // lbSearch
             // 
             this.lbSearch.FormattingEnabled = true;
-            this.lbSearch.Location = new System.Drawing.Point(6, 77);
+            this.lbSearch.Location = new System.Drawing.Point(11, 65);
             this.lbSearch.Name = "lbSearch";
             this.lbSearch.Size = new System.Drawing.Size(326, 134);
             this.lbSearch.TabIndex = 2;
@@ -237,29 +265,63 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(3, 15);
+            this.lblSearch.Location = new System.Drawing.Point(8, 7);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(50, 13);
             this.lblSearch.TabIndex = 1;
             this.lblSearch.Text = "Client ID:";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(227, 30);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(110, 33);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "History";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(59, 12);
+            this.txtSearch.Location = new System.Drawing.Point(73, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(264, 20);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(205, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(159, 33);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 230);
+            this.ClientSize = new System.Drawing.Size(673, 314);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Remote Stocks";
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -267,6 +329,10 @@
             this.PanelLeft.ResumeLayout(false);
             this.PanelLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,5 +358,10 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListBox lbSearch;
         private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
