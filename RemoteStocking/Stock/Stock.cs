@@ -56,9 +56,9 @@ public class Stock
     public string ToString()
     {
         if(executed)
-            return "Share: " + sType + " | rate: " + price + " | quantity: " + quantity + " | true";
+            return "[" + type + "]Share: " + sType + " | rate: " + price + " | quantity: " + quantity + " | true";
         else
-            return "Share: " + sType + " | rate: " + price + " | quantity: " + quantity + " | false";
+            return "[" + type + "]Share: " + sType + " | rate: " + price + " | quantity: " + quantity + " | false";
     }
 
     public static string GenerateId()
