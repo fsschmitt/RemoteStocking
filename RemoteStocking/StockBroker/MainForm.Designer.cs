@@ -43,13 +43,14 @@
             this.lbStocks.FormattingEnabled = true;
             this.lbStocks.Location = new System.Drawing.Point(12, 25);
             this.lbStocks.Name = "lbStocks";
-            this.lbStocks.Size = new System.Drawing.Size(219, 212);
+            this.lbStocks.Size = new System.Drawing.Size(341, 212);
             this.lbStocks.TabIndex = 0;
+            this.lbStocks.SelectedIndexChanged += new System.EventHandler(this.lbStocks_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(261, 169);
+            this.pictureBox1.Location = new System.Drawing.Point(399, 169);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -68,7 +69,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(238, 9);
+            this.lblPrice.Location = new System.Drawing.Point(356, 9);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(70, 13);
             this.lblPrice.TabIndex = 3;
@@ -76,7 +77,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(241, 25);
+            this.txtPrice.Location = new System.Drawing.Point(359, 25);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(104, 20);
             this.txtPrice.TabIndex = 4;
@@ -84,7 +85,7 @@
             // 
             // btnExecute
             // 
-            this.btnExecute.Location = new System.Drawing.Point(241, 51);
+            this.btnExecute.Location = new System.Drawing.Point(359, 51);
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(104, 112);
             this.btnExecute.TabIndex = 5;
@@ -96,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 245);
+            this.ClientSize = new System.Drawing.Size(475, 245);
             this.Controls.Add(this.btnExecute);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblPrice);
@@ -107,6 +108,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "StockBroker";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

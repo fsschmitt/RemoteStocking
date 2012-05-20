@@ -16,16 +16,16 @@ namespace Client.ServerOps {
     public interface IServerOps {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/GetEmailTransaction", ReplyAction="http://tempuri.org/IServerOps/GetEmailTransactionResponse")]
-        string GetEmailTransaction(int id);
+        string GetEmailTransaction(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/AddStock", ReplyAction="http://tempuri.org/IServerOps/AddStockResponse")]
         string AddStock(Stock stock);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/IsExecuted", ReplyAction="http://tempuri.org/IServerOps/IsExecutedResponse")]
-        bool IsExecuted(int id);
+        bool IsExecuted(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/ChangeStockRate", ReplyAction="http://tempuri.org/IServerOps/ChangeStockRateResponse")]
-        string ChangeStockRate(int id, double rate);
+        string ChangeStockRate(string id, double rate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/GetAllWaitingStock", ReplyAction="http://tempuri.org/IServerOps/GetAllWaitingStockResponse")]
         Stock[] GetAllWaitingStock();
@@ -64,7 +64,7 @@ namespace Client.ServerOps {
                 base(binding, remoteAddress) {
         }
         
-        public string GetEmailTransaction(int id) {
+        public string GetEmailTransaction(string id) {
             return base.Channel.GetEmailTransaction(id);
         }
         
@@ -72,11 +72,11 @@ namespace Client.ServerOps {
             return base.Channel.AddStock(stock);
         }
         
-        public bool IsExecuted(int id) {
+        public bool IsExecuted(string id) {
             return base.Channel.IsExecuted(id);
         }
         
-        public string ChangeStockRate(int id, double rate) {
+        public string ChangeStockRate(string id, double rate) {
             return base.Channel.ChangeStockRate(id, rate);
         }
         

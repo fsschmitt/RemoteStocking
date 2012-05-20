@@ -83,7 +83,7 @@ namespace StockBroker
         }
 
         //Removes a stock from the DB
-        public static void RemoveStockDB(int id)
+        private static void RemoveStockDB(string id)
         {
             SqlConnection conn = new SqlConnection(connString);
             string result = "";
@@ -93,7 +93,7 @@ namespace StockBroker
                 conn.Open();
                 string date = getSQLFormatDateNow();
                 /* Create the insert query */
-                string sqlcmd = "delete from StockTransaction where IDTransaction="+id;
+                string sqlcmd = "delete from StockTransaction where IDTransaction="+"'"+id+"';";
 
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();
@@ -141,6 +141,14 @@ namespace StockBroker
                 conn.Close();
             }
             return stocks;
+        }
+
+        // Determines the rate for a stock with the given id
+        public static void ExecuteStockRate(string id, double rate)
+        {
+            ServerOps.ServerOpsClient serverOps = new ServerOps.ServerOpsClient();
+            serverOps.ChangeStockRate(id, rate);
+            RemoveStockDB(id);
         }
     }
 }

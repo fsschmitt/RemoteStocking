@@ -45,8 +45,12 @@ namespace Client
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
-            Console.WriteLine("Press <Enter> to terminate.");
-            Console.ReadLine();
+        }
+
+        public static void StopApplication()
+        {
+            Application.Exit();
+            
         }
     }
 }

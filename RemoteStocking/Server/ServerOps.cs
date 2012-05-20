@@ -37,14 +37,14 @@ namespace Server
         }
 
         // Get client email given an transaction id
-        public string GetEmailTransaction(int id)
+        public string GetEmailTransaction(string id)
         {
             string res = "No results.";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
                 conn.Open();
-                string sqlcmd = "SELECT Email FROM StockTransaction WHERE IDTransaction=" + id;
+                string sqlcmd = "SELECT Email FROM StockTransaction WHERE IDTransaction='" + id + "';";
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 res = Convert.ToString(cmd.ExecuteScalar());
                 Console.WriteLine(res);
@@ -104,15 +104,41 @@ namespace Server
             return result;
         }
 
+        private Stock GetStock(string id)
+        {
+            Stock stock = null;
+            SqlConnection conn = new SqlConnection(connString);
+            try
+            {
+                conn.Open();
+                string sqlcmd = "SELECT * FROM StockTransaction WHERE IDTransaction='" + id + "';";
+                SqlCommand cmd = new SqlCommand(sqlcmd, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    stock = getStockFromReader(reader);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return stock;
+        }
+
         //  Check stock status
-        public bool IsExecuted(int id)
+        public bool IsExecuted(string id)
         {
             bool res = false;
             SqlConnection conn = new SqlConnection(connString);
             try
             {
                 conn.Open();
-                string sqlcmd = "SELECT Executed FROM StockTransaction WHERE IDTransaction=" + id;
+                string sqlcmd = "SELECT Executed FROM StockTransaction WHERE IDTransaction='" +id+"';";
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 res = Convert.ToBoolean(cmd.ExecuteScalar());
                 if (Server.Program.Debug) Console.WriteLine("StockID: "+id+" executed? "+res);
@@ -129,7 +155,7 @@ namespace Server
         }
 
         // Change the state of a stock for a given share and time
-        public string ChangeStockRate(int id, double rate)
+        public string ChangeStockRate(string id, double rate)
         {
             SqlConnection conn = new SqlConnection(connString);
             int rows = 0;
@@ -138,23 +164,26 @@ namespace Server
             {
                 conn.Open();
                 string date = getSQLFormatDateNow();
-                string sqlcmd = "UPDATE StockTransaction SET Rate=" + rate + ", TransactionTime=" + "'" + date + "'" + "WHERE IDTransaction = " + id + ";";
+                string sqlcmd = "UPDATE StockTransaction SET Rate=" + rate + ", TransactionTime=" + "'" + date + "'" + "," + "Executed=1" + "WHERE IDTransaction = '" + id + "';";
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();
+                if (rows == 1)
+                {
+                    Stock s = GetStock(id);
+                    if (s != null)
+                        SendEmail(s);
+                    return "200: Stock has been updated successfully!";
+                }
             }
             catch (Exception e)
             {
-                result = e.Message;
+                result = "500:"+e.Message;
             }
             finally
             {
                 conn.Close();
             }
-
-            if (rows == 1)
-                return "200: Stock has been updated successfully!";
-            else
-                return "500: " + result;
+            return result;
         }
 
         // Get all orders still waiting to execute

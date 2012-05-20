@@ -55,7 +55,10 @@ public class Stock
     override
     public string ToString()
     {
-        return "Share: " + sType + " | rate: " + price + " | quantity: " + quantity;
+        if(executed)
+            return "Share: " + sType + " | rate: " + price + " | quantity: " + quantity + " | true";
+        else
+            return "Share: " + sType + " | rate: " + price + " | quantity: " + quantity + " | false";
     }
 
     public static string GenerateId()

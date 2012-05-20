@@ -62,10 +62,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServerOps\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="StockBrokerOps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Service References\ServerOps\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServerOps\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServerOps\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServerOps\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServerOps\ServerOps.wsdl" />
+    <None Include="Stock.datasource" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stock\Stock.csproj">
@@ -81,6 +100,27 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServerOps\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServerOps\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServerOps\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServerOps\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServerOps\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -15,6 +15,7 @@ namespace StockBroker
         {
             InitializeComponent();
             InitializeStocks();
+            btnExecute.Enabled = false;
         }
 
         public delegate void InitializeStocksDelegate();
@@ -34,6 +35,11 @@ namespace StockBroker
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (lbStocks.SelectedIndex != -1 && txtPrice.Text != "")
+                btnExecute.Enabled = true;
+            else
+                btnExecute.Enabled = false;
+
             if (!char.IsControl(e.KeyChar)
                 && !char.IsDigit(e.KeyChar)
                 && e.KeyChar != '.')
@@ -52,7 +58,8 @@ namespace StockBroker
         private void btnExecute_Click(object sender, EventArgs e)
         {
             Stock stock = (Stock)lbStocks.SelectedItem;
-            Console.WriteLine("ID: "+stock.id);
+            StockBroker.StockBrokerOps.ExecuteStockRate(stock.id, Convert.ToDouble(txtPrice.Text));
+            lbStocks.Items.RemoveAt(lbStocks.SelectedIndex);
         }
 
         public delegate void addNewStockDelegate(Stock stock);
@@ -66,5 +73,20 @@ namespace StockBroker
 
             lbStocks.Items.Add(stock);
         }
+
+        private void lbStocks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbStocks.SelectedIndex != -1 && txtPrice.Text != "")
+                btnExecute.Enabled = true;
+            else
+                btnExecute.Enabled = false;
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.StopApplication();
+        }
+
+
     }
 }

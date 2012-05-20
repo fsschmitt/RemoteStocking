@@ -13,16 +13,16 @@ namespace Server
     {
 
         [OperationContract]
-        string GetEmailTransaction(int id);
+        string GetEmailTransaction(string id);
 
         [OperationContract]
         string AddStock(Stock stock);
 
         [OperationContract]
-        bool IsExecuted(int id);
+        bool IsExecuted(string id);
 
         [OperationContract]
-        string ChangeStockRate(int id, double rate);
+        string ChangeStockRate(string id, double rate);
 
         [OperationContract]
         List<Stock> GetAllWaitingStock();

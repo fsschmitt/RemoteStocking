@@ -73,6 +73,11 @@ namespace Client
             }
         }
 
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.StopApplication();
+        }
+
         
 
     }

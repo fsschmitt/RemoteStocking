@@ -11,20 +11,25 @@ namespace StockBroker
     {
         public static bool Debug = true;
         public static MainForm mf;
+        private static ServiceHost host;
 
         [STAThread]
         static void Main(string[] args)
         {
             Console.WriteLine("Stock Broker Initializing");
-            ServiceHost host = new ServiceHost(typeof(StockBroker.StockBrokerOps));
+            host = new ServiceHost(typeof(StockBroker.StockBrokerOps));
             host.Open();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             mf = new MainForm();
             Application.Run(mf);
-            Console.WriteLine("Press <Enter> to terminate.");
-            Console.ReadLine();
+            
+        }
+
+        public static void StopApplication()
+        {
             host.Close();
+            Application.Exit();
         }
     }
 }
