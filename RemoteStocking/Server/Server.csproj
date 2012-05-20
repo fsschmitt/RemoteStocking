@@ -64,6 +64,12 @@
     <None Include="Service References\StockBroker\item.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\StockBroker\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StockBroker\item11.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\StockBroker\StockBrokerOps.wsdl" />
   </ItemGroup>
   <ItemGroup>

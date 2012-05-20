@@ -13,6 +13,6 @@ namespace StockBroker
     {
 
         [OperationContract(IsOneWay=true)]
-        void DoWork();
+        void ReportNewStock(Stock stock);
     }
 }

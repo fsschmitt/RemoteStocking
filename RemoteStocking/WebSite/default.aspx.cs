@@ -46,7 +46,7 @@ namespace WebSite
             {
                 proxy = new ServerOps.ServerOpsClient();
                 Stock.transactionType type = ddType.SelectedIndex == 1 ? type = Stock.transactionType.Sell : type = Stock.transactionType.Buy;
-                Stock stock = new Stock(Convert.ToInt32(txtIDClient.Text), txtEmail.Text, type, Convert.ToInt32(txtQuantity.Text), Convert.ToString(ddShare.SelectedItem.Text), DateTime.Now, Convert.ToDouble(txtPrice.Text), false);
+                Stock stock = new Stock(Stock.GenerateId(),Convert.ToInt32(txtIDClient.Text), txtEmail.Text, type, Convert.ToInt32(txtQuantity.Text), Convert.ToString(ddShare.SelectedItem.Text), DateTime.Now, Convert.ToDouble(txtPrice.Text), false);
                 lblStatus.Text = "Status:\n" + proxy.AddStock(stock);
             }
             catch (Exception ex) {

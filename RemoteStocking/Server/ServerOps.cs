@@ -14,6 +14,9 @@ namespace Server
     [DataContract]
     public class ServerOps : IServerOps
     {
+        public static string connString = ConfigurationManager.ConnectionStrings["ServerDB"].ToString();
+        private StockBroker.StockBrokerOpsClient stockBroker = new StockBroker.StockBrokerOpsClient();
+
         private static string getSQLFormatDateNow()
         {
             return String.Format("{0:yyyy-MM-dd HH:mm:ss.fff}", DateTime.Now);
@@ -21,6 +24,7 @@ namespace Server
 
         private static Stock getStockFromReader(SqlDataReader reader)
         {
+            string IDTransaction = Convert.ToString(reader["IDTransaction"]);
             int IDClient = Convert.ToInt32(reader["IDClient"]);
             string Email = Convert.ToString(reader["Email"]);
             Stock.transactionType type = Convert.ToBoolean(reader["ActionType"]) ? type = Stock.transactionType.Sell : type = Stock.transactionType.Buy;
@@ -29,10 +33,8 @@ namespace Server
             DateTime sqlDate = Convert.ToDateTime(reader["TransactionTime"]);
             double price = Convert.ToDouble(reader["Rate"]);
             bool exec = Convert.ToBoolean(reader["Executed"]);
-            return new Stock(IDClient, Email, type, quantity, shareType, sqlDate, price, exec);
+            return new Stock(IDTransaction,IDClient, Email, type, quantity, shareType, sqlDate, price, exec);
         }
-
-        public static string connString = ConfigurationManager.ConnectionStrings["ServerDB"].ToString();
 
         // Get client email given an transaction id
         public string GetEmailTransaction(int id)
@@ -69,8 +71,8 @@ namespace Server
                 conn.Open();
                 string date = getSQLFormatDateNow();
                 /* Create the insert query */
-                string sqlcmd = "insert into StockTransaction (IDClient,Email,Quantity,ShareType,ActionType,TransactionTime,Rate,Executed)";
-                sqlcmd += "values (" + "'" + stock.client + "'" + "," + "'" + stock.email + "'" + "," + stock.quantity + ",";
+                string sqlcmd = "insert into StockTransaction (IDTransaction,IDClient,Email,Quantity,ShareType,ActionType,TransactionTime,Rate,Executed)";
+                sqlcmd += "values (" + "'" + stock.id + "'" + "," + "'" + stock.client + "'" + "," + "'" + stock.email + "'" + "," + stock.quantity + ",";
                 sqlcmd += "'" + stock.sType + "'" + "," + ((int)stock.type) + "," + "'" + date + "'" + "," + stock.price + ",";
                 if (stock.executed)
                     sqlcmd += 1 + ");";
@@ -81,6 +83,12 @@ namespace Server
 
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();
+
+                if (rows == 1)
+                {
+                    result = "200: The Stock has been added successfully!";
+                    stockBroker.ReportNewStock(stock);
+                }
             }
             catch (Exception e)
             {
@@ -90,9 +98,6 @@ namespace Server
             {
                 conn.Close();
             }
-
-            if (rows == 1)
-                result = "200: The Stock has been added successfully!";
 
             if (Server.Program.Debug) Console.WriteLine(result);
 

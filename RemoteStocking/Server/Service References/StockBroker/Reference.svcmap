@@ -22,6 +22,8 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="2c34b31c-6095-4f40-945b-ce47d378f05d" SourceId="1" SourceUrl="http://localhost:8733/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="11d7bdb8-c1fc-4741-bd68-556226834dee" SourceId="1" SourceUrl="http://localhost:8733/?xsd=xsd1" />
+    <MetadataFile FileName="item11.xsd" MetadataType="Schema" ID="175ad63f-bc72-4ec1-8637-a6da370edadd" SourceId="1" SourceUrl="http://localhost:8733/?xsd=xsd2" />
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="07d41bff-5ac6-4d7b-b2d6-d73f3253547f" SourceId="1" SourceUrl="http://localhost:8733/?disco" />
     <MetadataFile FileName="StockBrokerOps.wsdl" MetadataType="Wsdl" ID="c99096df-3309-4947-b1a0-374855353558" SourceId="1" SourceUrl="http://localhost:8733/?wsdl" />
   </Metadata>

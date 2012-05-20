@@ -15,8 +15,8 @@ namespace Server.StockBroker {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="StockBroker.IStockBrokerOps")]
     public interface IStockBrokerOps {
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStockBrokerOps/DoWork")]
-        void DoWork();
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStockBrokerOps/ReportNewStock")]
+        void ReportNewStock(Stock stock);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -46,8 +46,8 @@ namespace Server.StockBroker {
                 base(binding, remoteAddress) {
         }
         
-        public void DoWork() {
-            base.Channel.DoWork();
+        public void ReportNewStock(Stock stock) {
+            base.Channel.ReportNewStock(stock);
         }
     }
 }

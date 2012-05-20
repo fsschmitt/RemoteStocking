@@ -26,14 +26,8 @@ namespace Client
                 Console.WriteLine(s);
             }
         }
-        
-        [STAThread]
-        static void Main()
+        static void runTests()
         {
-            Console.WriteLine("Client Initializing");
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
             //ServerOps.ServerOpsClient proxy = new ServerOps.ServerOpsClient();
             //Console.WriteLine(proxy.GetEmailTransaction(1));
             //Console.WriteLine(proxy.AddStock(new Stock(123,"novoemail@gmail.com",Stock.transactionType.Buy,2,"Microsoft", DateTime.Now, 21.34,false)));
@@ -42,6 +36,15 @@ namespace Client
             //Console.WriteLine(proxy.ChangeStockRate(2,2.3));
             //testStocksWaiting(proxy);
             //testHistoryClient(proxy, 123);
+        }
+
+        [STAThread]
+        static void Main()
+        {
+            Console.WriteLine("Client Initializing");
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainForm());
             Console.WriteLine("Press <Enter> to terminate.");
             Console.ReadLine();
         }

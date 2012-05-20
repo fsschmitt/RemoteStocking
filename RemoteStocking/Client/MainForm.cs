@@ -51,7 +51,7 @@ namespace Client
         private void btnAddStock_Click(object sender, EventArgs e)
         {
             Stock.transactionType type = cbType.SelectedIndex == 1? type = Stock.transactionType.Sell : type = Stock.transactionType.Buy;
-            Stock stock = new Stock(Convert.ToInt32(txtIDClient.Text), txtEmail.Text, type, Convert.ToInt32(numQuantity.Value), Convert.ToString(cbShareType.SelectedItem.ToString()), DateTime.Now, Convert.ToDouble(txtPrice.Text), false);
+            Stock stock = new Stock(Stock.GenerateId(),Convert.ToInt32(txtIDClient.Text), txtEmail.Text, type, Convert.ToInt32(numQuantity.Value), Convert.ToString(cbShareType.SelectedItem.ToString()), DateTime.Now, Convert.ToDouble(txtPrice.Text), false);
             MessageBox.Show(proxy.AddStock(stock), "Server response:", MessageBoxButtons.OK);
         }
 

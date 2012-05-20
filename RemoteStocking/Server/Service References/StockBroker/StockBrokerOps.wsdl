@@ -11,21 +11,23 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8733/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IStockBrokerOps_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
+  <wsdl:message name="IStockBrokerOps_ReportNewStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReportNewStock" />
   </wsdl:message>
   <wsdl:portType name="IStockBrokerOps">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IStockBrokerOps/DoWork" message="tns:IStockBrokerOps_DoWork_InputMessage" />
+    <wsdl:operation name="ReportNewStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStockBrokerOps/ReportNewStock" message="tns:IStockBrokerOps_ReportNewStock_InputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="queueEndpoint" type="tns:IStockBrokerOps">
     <wsp:PolicyReference URI="#queueEndpoint_policy" />
     <soap12:binding transport="http://schemas.microsoft.com/soap/msmq" />
-    <wsdl:operation name="DoWork">
-      <soap12:operation soapAction="http://tempuri.org/IStockBrokerOps/DoWork" style="document" />
+    <wsdl:operation name="ReportNewStock">
+      <soap12:operation soapAction="http://tempuri.org/IStockBrokerOps/ReportNewStock" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

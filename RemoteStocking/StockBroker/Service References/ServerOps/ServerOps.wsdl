@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServerOps" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="TcpEndpoint_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8732/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8732/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8732/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://localhost:8732/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServerOps_GetEmailTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_GetEmailTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_AddStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStock" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_AddStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_IsExecuted_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsExecuted" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_IsExecuted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsExecutedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_ChangeStockRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStockRate" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_ChangeStockRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeStockRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_GetAllWaitingStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWaitingStock" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_GetAllWaitingStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWaitingStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_GetAllStocksByClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStocksByClient" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_GetAllStocksByClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStocksByClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_GetAllSharesType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSharesType" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_GetAllSharesType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSharesTypeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServerOps">
+    <wsdl:operation name="GetEmailTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerOps/GetEmailTransaction" message="tns:IServerOps_GetEmailTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerOps/GetEmailTransactionResponse" message="tns:IServerOps_GetEmailTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerOps/AddStock" message="tns:IServerOps_AddStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerOps/AddStockResponse" message="tns:IServerOps_AddStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsExecuted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerOps/IsExecuted" message="tns:IServerOps_IsExecuted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerOps/IsExecutedResponse" message="tns:IServerOps_IsExecuted_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStockRate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerOps/ChangeStockRate" message="tns:IServerOps_ChangeStockRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerOps/ChangeStockRateResponse" message="tns:IServerOps_ChangeStockRate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWaitingStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerOps/GetAllWaitingStock" message="tns:IServerOps_GetAllWaitingStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerOps/GetAllWaitingStockResponse" message="tns:IServerOps_GetAllWaitingStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStocksByClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerOps/GetAllStocksByClient" message="tns:IServerOps_GetAllStocksByClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerOps/GetAllStocksByClientResponse" message="tns:IServerOps_GetAllStocksByClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSharesType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerOps/GetAllSharesType" message="tns:IServerOps_GetAllSharesType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerOps/GetAllSharesTypeResponse" message="tns:IServerOps_GetAllSharesType_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TcpEndpoint" type="tns:IServerOps">
+    <wsp:PolicyReference URI="#TcpEndpoint_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetEmailTransaction">
+      <soap12:operation soapAction="http://tempuri.org/IServerOps/GetEmailTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStock">
+      <soap12:operation soapAction="http://tempuri.org/IServerOps/AddStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsExecuted">
+      <soap12:operation soapAction="http://tempuri.org/IServerOps/IsExecuted" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeStockRate">
+      <soap12:operation soapAction="http://tempuri.org/IServerOps/ChangeStockRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWaitingStock">
+      <soap12:operation soapAction="http://tempuri.org/IServerOps/GetAllWaitingStock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStocksByClient">
+      <soap12:operation soapAction="http://tempuri.org/IServerOps/GetAllStocksByClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSharesType">
+      <soap12:operation soapAction="http://tempuri.org/IServerOps/GetAllSharesType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServerOps">
+    <wsdl:port name="TcpEndpoint" binding="tns:TcpEndpoint">
+      <soap12:address location="net.tcp://localhost:8702/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8702/</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>FELIPESCHMITT\Felipe Schmitt</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
