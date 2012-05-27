@@ -60,9 +60,8 @@ namespace StockBroker
         private void btnExecute_Click(object sender, EventArgs e)
         {
             Stock stock = (Stock)lbStocks.SelectedItem;
-            //Thread t = new Thread(unused => StockBroker.StockBrokerOps.ExecuteStockRate(stock.id, Convert.ToDouble(txtPrice.Text)));
-            //t.Start();
-            StockBroker.StockBrokerOps.ExecuteStockRate(stock.id, Convert.ToDouble(txtPrice.Text));
+            ThreadStart processTaskThread = delegate { StockBroker.StockBrokerOps.ExecuteStockRate(stock.id, Convert.ToDouble(txtPrice.Text)); };
+            new Thread(processTaskThread).Start();
             lbStocks.Items.RemoveAt(lbStocks.SelectedIndex);
         }
 

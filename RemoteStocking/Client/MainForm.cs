@@ -52,18 +52,30 @@ namespace Client
 
         private void btnAddStock_Click(object sender, EventArgs e)
         {
-            Stock.transactionType type = cbType.SelectedIndex == 1? type = Stock.transactionType.Sell : type = Stock.transactionType.Buy;
-            Stock stock = new Stock(Stock.GenerateId(), Convert.ToInt32(txtIDClient.Text), txtEmail.Text, type, Convert.ToInt32(numQuantity.Value), Convert.ToString(cbShareType.SelectedItem.ToString()), DateTime.Now, Convert.ToDouble(txtPrice.Text), false, Convert.ToString(cbCurrency.SelectedItem.ToString()));
-            MessageBox.Show(proxy.AddStock(stock), "Server response:", MessageBoxButtons.OK);
+            if (txtPrice.Text != "" && txtEmail.Text != "" && txtIDClient.Text != "")
+            {
+                Stock.transactionType type = cbType.SelectedIndex == 1 ? type = Stock.transactionType.Sell : type = Stock.transactionType.Buy;
+                Stock stock = new Stock(Stock.GenerateId(), Convert.ToInt32(txtIDClient.Text), txtEmail.Text, type, Convert.ToInt32(numQuantity.Value), Convert.ToString(cbShareType.SelectedItem.ToString()), DateTime.Now, Convert.ToDouble(txtPrice.Text), false, Convert.ToString(cbCurrency.SelectedItem.ToString()));
+                MessageBox.Show(proxy.AddStock(stock), "Server response:", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled!", "Field is empty!", MessageBoxButtons.OK);
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            Stock[] stocks = proxy.GetAllStocksByClient(Convert.ToInt32(txtSearch.Text));
-            foreach (Stock s in stocks)
+            if(txtSearch.Text != "")
             {
-                lbSearch.Items.Add(s.ToString());
+                Stock[] stocks = proxy.GetAllStocksByClient(Convert.ToInt32(txtSearch.Text));
+                foreach (Stock s in stocks)
+                {
+                    lbSearch.Items.Add(s.ToString());
+                }
             }
+            else
+                MessageBox.Show("All fields must be filled!", "Field is empty!", MessageBoxButtons.OK);
         }
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)

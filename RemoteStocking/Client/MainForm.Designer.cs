@@ -211,6 +211,11 @@
             this.numQuantity.Name = "numQuantity";
             this.numQuantity.Size = new System.Drawing.Size(132, 20);
             this.numQuantity.TabIndex = 6;
+            this.numQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblType
             // 

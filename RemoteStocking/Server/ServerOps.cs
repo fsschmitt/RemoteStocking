@@ -10,6 +10,7 @@ using System.Net.Mail;
 using System.Net;
 using System.IO;
 using System.Web.Script.Serialization;
+using System.Threading;
 
 namespace Server
 {
@@ -215,17 +216,23 @@ namespace Server
                     rows = cmd.ExecuteNonQuery();
                     if (rows == 1)
                     {
-
-                        SendEmail(id);
+                        ThreadStart processTaskThread = delegate { SendEmail(id); };
+                        new Thread(processTaskThread).Start();
                         return "200: Stock has been updated successfully!";
                     }
                 }
                 else
+                {
                     result = "500: User not found!";
+                }
             }
             catch (Exception e)
             {
                 result = "500:"+e.Message;
+                Stock stock = GetStock(id);
+                stock.price = convertCurrencyToUSD(stock.currency, stock.price);
+                stock.currency = "USD";
+                stockBroker.ReportNewStock(stock);
             }
             finally
             {
