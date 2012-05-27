@@ -58,12 +58,21 @@ body{
 	background-color: #EBEBE5;
 }
 
+.twelve.columns.info{
+	background: url("http://fortysevenmedia.com/css/../images/bkg.png") #EBEBE5;
+	background-image: url(http://fortysevenmedia.com/images/bkg.png);
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-color: #EBEBE5;
+}
+
 .main-container{
 	min-height:100% !important;
 }
 
 .row.display{
-
+	margin-left:auto;
+	margin-right:auto;
 	margin-top:5em;
 
 }
@@ -86,6 +95,7 @@ select{
 }
 
 #history-form{
+	width:100%;
 	text-align:center;
 }
 

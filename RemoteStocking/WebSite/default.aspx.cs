@@ -9,7 +9,7 @@ namespace WebSite
 {
     public partial class _default : System.Web.UI.Page
     {
-        ServerOps.ServerOpsClient proxy; 
+        ServerOps.ServerOpsClient proxy;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (ddShare.Items.Count <= 1)

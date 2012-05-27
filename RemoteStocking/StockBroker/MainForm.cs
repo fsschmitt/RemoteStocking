@@ -17,6 +17,7 @@ namespace StockBroker
             InitializeComponent();
             InitializeStocks();
             btnExecute.Enabled = false;
+            btnFinance.Enabled = false;
         }
 
         public delegate void InitializeStocksDelegate();
@@ -79,6 +80,11 @@ namespace StockBroker
 
         private void lbStocks_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lbStocks.SelectedIndex != -1)
+                btnFinance.Enabled = true;
+            else
+                btnFinance.Enabled = false;
+
             if (lbStocks.SelectedIndex != -1 && txtPrice.Text != "")
                 btnExecute.Enabled = true;
             else
@@ -90,6 +96,11 @@ namespace StockBroker
             Program.StopApplication();
         }
 
+        private void btnFinance_Click(object sender, EventArgs e)
+        {
+            Stock stock = (Stock)lbStocks.SelectedItem;
+            System.Diagnostics.Process.Start("http://www.google.com/finance?q="+stock.sType);
+        }
 
     }
 }

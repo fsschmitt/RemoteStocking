@@ -60,9 +60,9 @@ public class Stock
     public string ToString()
     {
         if(executed)
-            return "[" + type + "]Share: " + sType + " | rate: " + price + " " + String.Format("{0:0.00}", currency)  + " | quantity: " + quantity + " | true";
+            return "[" + type + "]Share: " + sType + " | rate: " + String.Format("{0:0.0000}", price) + " " + currency + " | quantity: " + quantity + " | true";
         else
-            return "[" + type + "]Share: " + sType + " | rate: " + price + " " + String.Format("{0:0.00}", currency) + " | quantity: " + quantity + " | false";
+            return "[" + type + "]Share: " + sType + " | rate: " + String.Format("{0:0.0000}", price) + " " + currency + " | quantity: " + quantity + " | false";
     }
 
     public static string GenerateId()

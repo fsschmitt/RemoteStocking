@@ -37,7 +37,7 @@
         <div class ="main-container">
             <form id="searchForm" runat="server" onsubmit="return doCheck('txtSearch');">
                 <div class="row display">
-                    <div class="six columns">
+                    <div class="six columns centered">
                         <div class="welcome"> 
                             <h1> Bem vindo!</h1> 
                             <div id="error-server"><asp:Label ID="lblServer" runat="server"></asp:Label> </div> 
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="row display">
-                    <div class="six columns info">
+                    <div class="six columns centered info">
                         <div class="column-container">
                             <h2> Add new stocks! </h2>
 
@@ -119,7 +119,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="six columns info">
+                </div>
+                <div class="row display">
+                    <div class="twelve columns info">
                         <div class="column-container">
                             <h2> See your stocks! </h2>
                             
@@ -128,7 +130,8 @@
                                     <asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
                                     <asp:Button ID="btnHistory" runat="server" onclick="btnHistory_Click" 
                                         Text="Search" />
-                                    <div id="history-list"><asp:ListBox ID="lbHistory" runat="server" Width="326px" Height="147px"></asp:ListBox></div>
+                                    <div id="history-list"><asp:ListBox ID="lbHistory" runat="server" Width="100%" 
+                                            Height="300px"></asp:ListBox></div>
                                 </div>
                         </div>
                     </div>

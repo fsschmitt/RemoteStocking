@@ -33,6 +33,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.PanelLeft = new System.Windows.Forms.Panel();
+            this.lblCurrency = new System.Windows.Forms.Label();
+            this.cbCurrency = new System.Windows.Forms.ComboBox();
             this.btnAddStock = new System.Windows.Forms.Button();
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -53,8 +55,6 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.cbCurrency = new System.Windows.Forms.ComboBox();
-            this.lblCurrency = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -129,6 +129,23 @@
             this.PanelLeft.Name = "PanelLeft";
             this.PanelLeft.Size = new System.Drawing.Size(291, 206);
             this.PanelLeft.TabIndex = 1;
+            // 
+            // lblCurrency
+            // 
+            this.lblCurrency.AutoSize = true;
+            this.lblCurrency.Location = new System.Drawing.Point(9, 130);
+            this.lblCurrency.Name = "lblCurrency";
+            this.lblCurrency.Size = new System.Drawing.Size(52, 13);
+            this.lblCurrency.TabIndex = 14;
+            this.lblCurrency.Text = "Currency:";
+            // 
+            // cbCurrency
+            // 
+            this.cbCurrency.FormattingEnabled = true;
+            this.cbCurrency.Location = new System.Drawing.Point(10, 145);
+            this.cbCurrency.Name = "cbCurrency";
+            this.cbCurrency.Size = new System.Drawing.Size(132, 21);
+            this.cbCurrency.TabIndex = 13;
             // 
             // btnAddStock
             // 
@@ -281,6 +298,7 @@
             // lbSearch
             // 
             this.lbSearch.FormattingEnabled = true;
+            this.lbSearch.HorizontalScrollbar = true;
             this.lbSearch.Location = new System.Drawing.Point(11, 65);
             this.lbSearch.Name = "lbSearch";
             this.lbSearch.Size = new System.Drawing.Size(326, 134);
@@ -312,23 +330,6 @@
             this.txtSearch.Size = new System.Drawing.Size(264, 20);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
-            // 
-            // cbCurrency
-            // 
-            this.cbCurrency.FormattingEnabled = true;
-            this.cbCurrency.Location = new System.Drawing.Point(10, 145);
-            this.cbCurrency.Name = "cbCurrency";
-            this.cbCurrency.Size = new System.Drawing.Size(132, 21);
-            this.cbCurrency.TabIndex = 13;
-            // 
-            // lblCurrency
-            // 
-            this.lblCurrency.AutoSize = true;
-            this.lblCurrency.Location = new System.Drawing.Point(9, 130);
-            this.lblCurrency.Name = "lblCurrency";
-            this.lblCurrency.Size = new System.Drawing.Size(52, 13);
-            this.lblCurrency.TabIndex = 14;
-            this.lblCurrency.Text = "Currency:";
             // 
             // MainForm
             // 

@@ -35,22 +35,24 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.btnExecute = new System.Windows.Forms.Button();
+            this.btnFinance = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbStocks
             // 
             this.lbStocks.FormattingEnabled = true;
+            this.lbStocks.HorizontalScrollbar = true;
             this.lbStocks.Location = new System.Drawing.Point(12, 25);
             this.lbStocks.Name = "lbStocks";
-            this.lbStocks.Size = new System.Drawing.Size(341, 212);
+            this.lbStocks.Size = new System.Drawing.Size(341, 186);
             this.lbStocks.TabIndex = 0;
             this.lbStocks.SelectedIndexChanged += new System.EventHandler(this.lbStocks_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(399, 169);
+            this.pictureBox1.Location = new System.Drawing.Point(359, 176);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -93,11 +95,22 @@
             this.btnExecute.UseVisualStyleBackColor = true;
             this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
             // 
+            // btnFinance
+            // 
+            this.btnFinance.Location = new System.Drawing.Point(12, 217);
+            this.btnFinance.Name = "btnFinance";
+            this.btnFinance.Size = new System.Drawing.Size(127, 23);
+            this.btnFinance.TabIndex = 6;
+            this.btnFinance.Text = "Search on the Web";
+            this.btnFinance.UseVisualStyleBackColor = true;
+            this.btnFinance.Click += new System.EventHandler(this.btnFinance_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 245);
+            this.Controls.Add(this.btnFinance);
             this.Controls.Add(this.btnExecute);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.lblPrice);
@@ -123,5 +136,6 @@
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Button btnExecute;
+        private System.Windows.Forms.Button btnFinance;
     }
 }
