@@ -39,7 +39,10 @@ public class Stock
     [DataMember]
     public bool executed { get; set; }
 
-    public Stock(string id, int c, String e, transactionType t, int q, string st, DateTime ti, double p, bool ex)
+    [DataMember]
+    public string currency { get; set; }
+
+    public Stock(string id, int c, String e, transactionType t, int q, string st, DateTime ti, double p, bool ex, string cu)
     {
         this.id = id;
         this.client = c;
@@ -50,15 +53,16 @@ public class Stock
         this.time = ti;
         this.price = p;
         this.executed = ex;
+        this.currency = cu;
     }
 
     override
     public string ToString()
     {
         if(executed)
-            return "[" + type + "]Share: " + sType + " | rate: " + price + " | quantity: " + quantity + " | true";
+            return "[" + type + "]Share: " + sType + " | rate: " + price + " " + String.Format("{0:0.00}", currency)  + " | quantity: " + quantity + " | true";
         else
-            return "[" + type + "]Share: " + sType + " | rate: " + price + " | quantity: " + quantity + " | false";
+            return "[" + type + "]Share: " + sType + " | rate: " + price + " " + String.Format("{0:0.00}", currency) + " | quantity: " + quantity + " | false";
     }
 
     public static string GenerateId()

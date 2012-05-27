@@ -362,6 +362,44 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="wsEndpoint_GetAllCurrency_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsEndpoint_GetAllCurrency_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8732/?xsd=xsd0" namespace="http://tempuri.org/" />
@@ -412,6 +450,12 @@
   <wsdl:message name="IServerOps_GetAllSharesType_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllSharesTypeResponse" />
   </wsdl:message>
+  <wsdl:message name="IServerOps_GetAllCurrency_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCurrency" />
+  </wsdl:message>
+  <wsdl:message name="IServerOps_GetAllCurrency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCurrencyResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServerOps">
     <wsdl:operation name="GetEmailTransaction">
       <wsdl:input wsaw:Action="http://tempuri.org/IServerOps/GetEmailTransaction" message="tns:IServerOps_GetEmailTransaction_InputMessage" />
@@ -440,6 +484,10 @@
     <wsdl:operation name="GetAllSharesType">
       <wsdl:input wsaw:Action="http://tempuri.org/IServerOps/GetAllSharesType" message="tns:IServerOps_GetAllSharesType_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServerOps/GetAllSharesTypeResponse" message="tns:IServerOps_GetAllSharesType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCurrency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServerOps/GetAllCurrency" message="tns:IServerOps_GetAllCurrency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServerOps/GetAllCurrencyResponse" message="tns:IServerOps_GetAllCurrency_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="wsEndpoint" type="tns:IServerOps">
@@ -519,6 +567,17 @@
       </wsdl:input>
       <wsdl:output>
         <wsp:PolicyReference URI="#wsEndpoint_GetAllSharesType_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCurrency">
+      <soap12:operation soapAction="http://tempuri.org/IServerOps/GetAllCurrency" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#wsEndpoint_GetAllCurrency_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#wsEndpoint_GetAllCurrency_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>

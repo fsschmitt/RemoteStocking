@@ -53,6 +53,8 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.cbCurrency = new System.Windows.Forms.ComboBox();
+            this.lblCurrency = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -108,6 +110,8 @@
             // 
             // PanelLeft
             // 
+            this.PanelLeft.Controls.Add(this.lblCurrency);
+            this.PanelLeft.Controls.Add(this.cbCurrency);
             this.PanelLeft.Controls.Add(this.btnAddStock);
             this.PanelLeft.Controls.Add(this.lblPrice);
             this.PanelLeft.Controls.Add(this.txtPrice);
@@ -309,6 +313,23 @@
             this.txtSearch.TabIndex = 0;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
+            // cbCurrency
+            // 
+            this.cbCurrency.FormattingEnabled = true;
+            this.cbCurrency.Location = new System.Drawing.Point(10, 145);
+            this.cbCurrency.Name = "cbCurrency";
+            this.cbCurrency.Size = new System.Drawing.Size(132, 21);
+            this.cbCurrency.TabIndex = 13;
+            // 
+            // lblCurrency
+            // 
+            this.lblCurrency.AutoSize = true;
+            this.lblCurrency.Location = new System.Drawing.Point(9, 130);
+            this.lblCurrency.Name = "lblCurrency";
+            this.lblCurrency.Size = new System.Drawing.Size(52, 13);
+            this.lblCurrency.TabIndex = 14;
+            this.lblCurrency.Text = "Currency:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,5 +385,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblCurrency;
+        private System.Windows.Forms.ComboBox cbCurrency;
     }
 }

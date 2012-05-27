@@ -32,5 +32,8 @@ namespace Server
 
         [OperationContract]
         List<String> GetAllSharesType();
+
+        [OperationContract]
+        List<String> GetAllCurrency();
     }
 }

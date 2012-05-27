@@ -32,7 +32,8 @@ namespace StockBroker
             DateTime sqlDate = Convert.ToDateTime(reader["TransactionTime"]);
             double price = Convert.ToDouble(reader["Rate"]);
             bool exec = Convert.ToBoolean(reader["Executed"]);
-            return new Stock(IDTransaction, IDClient, Email, type, quantity, shareType, sqlDate, price, exec);
+            string currency = Convert.ToString(reader["Currency"]);
+            return new Stock(IDTransaction, IDClient, Email, type, quantity, shareType, sqlDate, price, exec,currency);
         }
 
         //Report to the StockBroker the arrival of a new stock
@@ -46,13 +47,13 @@ namespace StockBroker
                 conn.Open();
                 string date = getSQLFormatDateNow();
                 /* Create the insert query */
-                string sqlcmd = "insert into StockTransaction (IDTransaction,IDClient,Email,Quantity,ShareType,ActionType,TransactionTime,Rate,Executed)";
+                string sqlcmd = "insert into StockTransaction (IDTransaction,IDClient,Email,Quantity,ShareType,ActionType,TransactionTime,Rate,Executed,Currency)";
                 sqlcmd += "values (" + "'" + stock.id + "'" + "," + "'" + stock.client + "'" + "," + "'" + stock.email + "'" + "," + stock.quantity + ",";
                 sqlcmd += "'" + stock.sType + "'" + "," + ((int)stock.type) + "," + "'" + date + "'" + "," + stock.price + ",";
                 if (stock.executed)
-                    sqlcmd += 1 + ");";
+                    sqlcmd += 1 + ",'" + stock.currency + "');";
                 else
-                    sqlcmd += 0 + ");";
+                    sqlcmd += 0 + ",'" + stock.currency + "');";
 
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();

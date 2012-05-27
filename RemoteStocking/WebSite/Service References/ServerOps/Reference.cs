@@ -35,6 +35,9 @@ namespace WebSite.ServerOps {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/GetAllSharesType", ReplyAction="http://tempuri.org/IServerOps/GetAllSharesTypeResponse")]
         string[] GetAllSharesType();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServerOps/GetAllCurrency", ReplyAction="http://tempuri.org/IServerOps/GetAllCurrencyResponse")]
+        string[] GetAllCurrency();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -90,6 +93,10 @@ namespace WebSite.ServerOps {
         
         public string[] GetAllSharesType() {
             return base.Channel.GetAllSharesType();
+        }
+        
+        public string[] GetAllCurrency() {
+            return base.Channel.GetAllCurrency();
         }
     }
 }

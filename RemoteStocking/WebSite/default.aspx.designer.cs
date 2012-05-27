@@ -20,7 +20,7 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm searchForm;
-
+        
         /// <summary>
         /// lblServer control.
         /// </summary>
@@ -65,7 +65,7 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
-
+        
         /// <summary>
         /// lblType control.
         /// </summary>
@@ -74,7 +74,7 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblType;
-
+        
         /// <summary>
         /// ddType control.
         /// </summary>
@@ -83,7 +83,7 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddType;
-
+        
         /// <summary>
         /// lblQuantity control.
         /// </summary>
@@ -92,7 +92,7 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblQuantity;
-
+        
         /// <summary>
         /// txtQuantity control.
         /// </summary>
@@ -101,7 +101,7 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtQuantity;
-
+        
         /// <summary>
         /// lblShare control.
         /// </summary>
@@ -110,7 +110,7 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblShare;
-
+        
         /// <summary>
         /// ddShare control.
         /// </summary>
@@ -119,7 +119,25 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddShare;
-
+        
+        /// <summary>
+        /// lblCurrency control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCurrency;
+        
+        /// <summary>
+        /// ddCurrency control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddCurrency;
+        
         /// <summary>
         /// lblPrice control.
         /// </summary>
@@ -128,7 +146,7 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPrice;
-
+        
         /// <summary>
         /// txtPrice control.
         /// </summary>
@@ -137,7 +155,7 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrice;
-
+        
         /// <summary>
         /// btnNew control.
         /// </summary>
@@ -146,7 +164,7 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNew;
-
+        
         /// <summary>
         /// lblStatus control.
         /// </summary>
@@ -191,7 +209,5 @@ namespace WebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox lbHistory;
-
-        
     }
 }

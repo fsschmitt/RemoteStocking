@@ -14,19 +14,32 @@ namespace WebSite
         {
             if (ddShare.Items.Count <= 1)
             {
+                ddShare.Items.Clear();
+                ddCurrency.Items.Clear();
                 ddShare.Items.Add("None available!");
+                ddCurrency.Items.Add("None available!");
                 proxy = new ServerOps.ServerOpsClient();
                 try
                 {
                     proxy.Open();
                     String[] types = proxy.GetAllSharesType();
+                    String[] currencies = proxy.GetAllCurrency();
                     ddShare.Items.Clear();
+                    ddCurrency.Items.Clear();
                     if(types.Count() == 0)
                         ddShare.Items.Add("None available!");
                     else
                         foreach (String s in types)
                         {
                             ddShare.Items.Add(s);
+                        }
+
+                    if (currencies.Count() == 0)
+                        ddCurrency.Items.Add("None available!");
+                    else
+                        foreach (String s in currencies)
+                        {
+                            ddCurrency.Items.Add(s);
                         }
                 }
                 catch (Exception ex){}
@@ -46,7 +59,7 @@ namespace WebSite
             {
                 proxy = new ServerOps.ServerOpsClient();
                 Stock.transactionType type = ddType.SelectedIndex == 1 ? type = Stock.transactionType.Sell : type = Stock.transactionType.Buy;
-                Stock stock = new Stock(Stock.GenerateId(),Convert.ToInt32(txtIDClient.Text), txtEmail.Text, type, Convert.ToInt32(txtQuantity.Text), Convert.ToString(ddShare.SelectedItem.Text), DateTime.Now, Convert.ToDouble(txtPrice.Text), false);
+                Stock stock = new Stock(Stock.GenerateId(), Convert.ToInt32(txtIDClient.Text), txtEmail.Text, type, Convert.ToInt32(txtQuantity.Text), Convert.ToString(ddShare.SelectedItem.Text), DateTime.Now, Convert.ToDouble(txtPrice.Text), false, Convert.ToString(ddCurrency.SelectedItem.Text));
                 lblStatus.Text = "Status:\n" + proxy.AddStock(stock);
             }
             catch (Exception ex) {

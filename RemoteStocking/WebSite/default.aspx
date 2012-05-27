@@ -95,6 +95,15 @@
                             </div>
                             <div class="myfield">
                                 <div class="mylabel">
+                                    <asp:Label ID="lblCurrency" runat="server">Currency:</asp:Label>
+                                </div>
+                                <div class="myinput">
+                                    <asp:DropDownList ID="ddCurrency" runat="server">
+                                    </asp:DropDownList>
+                                </div>
+                            </div>
+                            <div class="myfield">
+                                <div class="mylabel">
                                     <asp:Label ID="lblPrice" runat="server">Price:</asp:Label>
                                 </div>
                                 <div class="myinput">

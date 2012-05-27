@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace StockBroker
 {
@@ -58,6 +59,8 @@ namespace StockBroker
         private void btnExecute_Click(object sender, EventArgs e)
         {
             Stock stock = (Stock)lbStocks.SelectedItem;
+            //Thread t = new Thread(unused => StockBroker.StockBrokerOps.ExecuteStockRate(stock.id, Convert.ToDouble(txtPrice.Text)));
+            //t.Start();
             StockBroker.StockBrokerOps.ExecuteStockRate(stock.id, Convert.ToDouble(txtPrice.Text));
             lbStocks.Items.RemoveAt(lbStocks.SelectedIndex);
         }

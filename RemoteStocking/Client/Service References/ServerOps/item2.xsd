@@ -3,6 +3,7 @@
   <xs:complexType name="Stock">
     <xs:sequence>
       <xs:element minOccurs="0" name="client" type="xs:int" />
+      <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="executed" type="xs:boolean" />
       <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
