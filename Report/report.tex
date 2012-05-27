@@ -1,0 +1,221 @@
+\documentclass[11pt,a4paper]{report}
+ 
+\usepackage[portuguese]{babel}
+\usepackage{indentfirst}
+%Em windows
+ 
+\usepackage[latin1]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[tt]{titlepic}
+
+\usepackage{listings}
+\usepackage{graphicx}
+
+
+\begin{document}
+\renewcommand{\thechapter}{}
+\renewcommand{\chaptername}{}
+\renewcommand{\thesection}{}
+
+\begin{titlepage}
+
+\begin{center}
+
+\includegraphics{feup}  
+
+\vspace{10 mm}
+
+\textsc{\large Mestrado Integrado em Engenharia Informática e Computação} \\
+\textsc{\large Tecnologias de Distribuição e Integração} \\
+\textsc{\normalsize 4º Ano} \\ 
+\vspace{10 mm}
+\textsc{\LARGE Remote Stocks} \\
+\textsc{\normalsize Relatório Final} \\
+
+% Title
+\vspace{30 mm}
+% Author and supervisor
+\emph{Autores:}\\
+Felipe de Souza Schmitt - 080509160 - ei08160@fe.up.pt \\
+José Pedro Neto dos Santos Marques - 080509087 - ei08087@fe.up.pt
+
+\vfill
+
+% Bottom of the page
+{\large \today}
+
+\end{center}
+
+\end{titlepage}
+
+\newpage
+
+\tableofcontents
+\setcounter{tocdepth}{1}
+
+\newpage
+
+\chapter{Introdução}
+
+Este relatório visa descrever o sistema Remote Stocks que foi desenvolvido no âmbito da unidade curricular de Tecnologias de Distribuição e Integração  do Mestrado Integrado em Engenharia Informática e Computação. \\
+
+O sistema foi desenvolvido com o intuito de consolidar os conceitos abordados nas aulas, principalmente a integração de uma fila MSMQ, serviço web e uma aplicação web. O projeto proposto consistia na criação de uma estrutura para um serviço de bolsa com o objetivo de facilitar todo o processo entre o cliente e o serviço bolsista. Todo este sistema irá ser descrito ao longo deste relatório.
+
+\chapter{Especificação da aplicação}
+
+\section{Principais funcionalidades}
+
+\subsection*{Cliente (App e Website)}
+\begin{itemize}
+\item Entrada de uma nova ordem de compra/venda;
+\item Consulta do estado de uma ordem;
+\item Visualização do histórico de ordens;
+\item Escolha da moeda em que deverá ser disponiblizada a informação.
+\end{itemize}
+
+\subsection*{Serviço Bolsista}
+\begin{itemize}
+\item Consulta de todas as ordens por executar;
+\item Alterar o estado de uma ordem para executada com indicação da data/hora de execução e a sua cotação atual;
+\item Acesso rápido à cotação real da acção no mercado;
+\item Visualização do preço proposto pelo cliente em U.S. Dollars.
+\end{itemize}
+
+\subsection*{Servidor}
+\begin{itemize}
+\item Envio de e-mail a notificar o cliente após a execução da sua ordem;
+\item Disponiblização de todas as ordens de um cliente;
+\item Disponiblização de todas as ordens por executar;
+\item Disponiblização de todos tipos de ação suportados pelo sistema;
+\item Disponibilização de todas as moedas suportadas pelo sistema;
+\item Conversão da moeda do utilizador para a do serviço bolsista (USD) e vice-versa.
+\end{itemize}
+
+\section{Estrutura}
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{estrutura}}
+
+\section{Arquitetura}
+
+[Inserir diagrama UML]
+
+
+\chapter{Implementação}
+
+\section{GUI App}
+
+A GUI App foi implementada através de uma aplicação realizada em C\# .NET 4.0 através de Window Forms foi nos possível criar toda a interface da aplicação com o utilizador. Desta forma foi adicionada a referência web do serviço disponibilizado pelo servidor através de wsHttpBinding sendo todos as funções realizadas através da utilização de uma proxy criada para este serviço.\\
+
+\section{Website}
+
+O Website foi implementado utilizando ASP .NET, JavaScript e CSS desta forma foi nos possível realizar de forma simples a ligação do site com o servidor assim como a criação de toda a interface com o utilizador de forma intuitiva e elegante.
+
+\section{Servidor}
+
+Para o Servidor foi criado um serviço web com uma interface de forma a tornar intuitiva a utilização de todos os serviços disponibilizados. Com o objetivo de toda a informação ser guardada de forma consistente e persistente o Servidor possui uma base de dados utilizando a tecnologia SQL Server onde guarda toda a informação. O Servidor também possui uma referência para o serviço bolsista de forma a poder invocar métodos que se encontrem na sua interface.
+
+\pagebreak
+
+\section{Serviço Bolsista}
+
+Assim como o servidor o Serviço Bolsista possui um serviço web com uma interface de forma a poder receber pedidos do servidor através da sua ligação que é feita através de uma netMsmqBinding que permite que os pedidos fiquem guardados quando este serviço se encontre desligado. Este serviço também possui uma base de dados (SQL Server) para guardar toda a informação de forma persistente.
+
+\chapter{Demonstração}
+
+\section{GUI App}
+
+Funcionalidade de adicionar uma nova ordem:
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{Client1}}
+
+\vspace{0.5cm}
+
+Funcionalidade de ver o estado de uma ordem e o histórico:
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{Client2}}
+
+
+\section{Website}
+
+Layout do Website com informações retiradas do servidor (tipos de moedas e ações disponíveis:
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{Web}}
+
+\vspace{0.5cm}
+
+Funcionalidade de adicionar uma nova ordem:
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{Web1}}
+
+\pagebreak
+
+Funcionalidade de ver o estado de uma ordem e o histórico:
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{Web2}}
+
+\section{Serviço Bolsista}
+
+Funcionalidade de ver todas as ordens por executar:
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{StockBroker}}
+
+\pagebreak
+
+Funcionalidade de pesquisar rápidamente informações reais sobre a ação:
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{StockBroker1}}
+
+\vspace{0.5cm}
+
+Resultado:
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{SearchResult}}
+
+\pagebreak
+
+Funcionalidade de executar uma ordem ao inserir a sua cotação atual:
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{StockBroker3}}
+
+\vspace{0.5cm}
+
+Após a operação a ordem sai da lista:
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{StockBroker4}}
+
+\pagebreak
+
+Após a execução de uma ordem o seu estado é alterado no servidor e este envia um e-mail ao cliente a avisar que a sua ordem já foi executada:
+
+\makebox[\textwidth]{%
+\includegraphics[width=0.4\textwidth]{emailNotification}}
+
+\vspace{0.5cm}
+
+Email recebido pelo cliente:
+
+\makebox[\textwidth]{%
+\includegraphics[width=1\textwidth]{email}}
+
+\chapter{Conclusão}
+
+Este trabalho foi, sem dúvida, bastante enriquecedor, dado que nos permitiu explorar os conhecimentos transmitidos nas aulas\\
+
+Ao longo do desenvolvimento deparamo-nos com alguns desafios que tornaram o projecto aliciante e motivador: a criação dos protocolos de ligação entre os clientes e serviços, a utilização de serivços exteriores (Conversor de moeda) e a criação de um website atravé da utilização de um serviço web.\\
+
+Outro desafio que tivemos de enfrentar foram a escolha de novas funcionalidades a implementar no nosso sistema, uma vez que todo este ambiente económico não é do nosso melhor conhecimento.\\
+
+Em conclusão este trabalho deu nos a oportunidade de aprofundar o nosso conhecimento nas várias tecnologias usadas assim como a criação de uma aplicação distribuida e a sua integração.\\
+
+\end{document}
