@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Globalization;
 
 namespace StockBroker
 {
@@ -49,12 +50,12 @@ namespace StockBroker
                 /* Create the insert query */
                 string sqlcmd = "insert into StockTransaction (IDTransaction,IDClient,Email,Quantity,ShareType,ActionType,TransactionTime,Rate,Executed,Currency)";
                 sqlcmd += "values (" + "'" + stock.id + "'" + "," + "'" + stock.client + "'" + "," + "'" + stock.email + "'" + "," + stock.quantity + ",";
-                sqlcmd += "'" + stock.sType + "'" + "," + ((int)stock.type) + "," + "'" + date + "'" + "," + stock.price + ",";
+                sqlcmd += "'" + stock.sType + "'" + "," + ((int)stock.type) + "," + "'" + date + "'" + "," + stock.price.ToString(CultureInfo.InvariantCulture) + ",";
                 if (stock.executed)
                     sqlcmd += 1 + ",'" + stock.currency + "');";
                 else
                     sqlcmd += 0 + ",'" + stock.currency + "');";
-
+                Console.WriteLine(sqlcmd);
                 SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                 rows = cmd.ExecuteNonQuery();
 

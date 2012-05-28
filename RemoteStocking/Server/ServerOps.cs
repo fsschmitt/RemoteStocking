@@ -11,6 +11,7 @@ using System.Net;
 using System.IO;
 using System.Web.Script.Serialization;
 using System.Threading;
+using System.Globalization;
 
 namespace Server
 {
@@ -112,7 +113,7 @@ namespace Server
                 /* Create the insert query */
                 string sqlcmd = "insert into StockTransaction (IDTransaction,IDClient,Email,Quantity,ShareType,ActionType,TransactionTime,Rate,Executed,Currency)";
                 sqlcmd += "values (" + "'" + stock.id + "'" + "," + "'" + stock.client + "'" + "," + "'" + stock.email + "'" + "," + stock.quantity + ",";
-                sqlcmd += "'" + stock.sType + "'" + "," + ((int)stock.type) + "," + "'" + date + "'" + "," + stock.price + ",";
+                sqlcmd += "'" + stock.sType + "'" + "," + ((int)stock.type) + "," + "'" + date + "'" + "," + stock.price.ToString(CultureInfo.InvariantCulture) + ",";
                 if (stock.executed)
                     sqlcmd += 1 + ",'" + stock.currency + "');";
                 else
@@ -211,7 +212,7 @@ namespace Server
                     rate = convertCurrencyFromUSD(s.currency, rate);
                     conn.Open();
                     string date = getSQLFormatDateNow();
-                    string sqlcmd = "UPDATE StockTransaction SET Rate=" + rate + ", TransactionTime=" + "'" + date + "'" + "," + "Executed=1" + "WHERE IDTransaction = '" + id + "';";
+                    string sqlcmd = "UPDATE StockTransaction SET Rate=" + rate.ToString(CultureInfo.InvariantCulture) + ", TransactionTime=" + "'" + date + "'" + "," + "Executed=1" + "WHERE IDTransaction = '" + id + "';";
                     SqlCommand cmd = new SqlCommand(sqlcmd, conn);
                     rows = cmd.ExecuteNonQuery();
                     if (rows == 1)
@@ -233,6 +234,7 @@ namespace Server
                 stock.price = convertCurrencyToUSD(stock.currency, stock.price);
                 stock.currency = "USD";
                 stockBroker.ReportNewStock(stock);
+                Console.WriteLine(result);
             }
             finally
             {
