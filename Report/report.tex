@@ -84,9 +84,9 @@ O sistema foi desenvolvido com o intuito de consolidar os conceitos abordados na
 \subsection*{Servidor}
 \begin{itemize}
 \item Envio de e-mail a notificar o cliente após a execução da sua ordem;
-\item Disponiblização de todas as ordens de um cliente;
-\item Disponiblização de todas as ordens por executar;
-\item Disponiblização de todos tipos de ação suportados pelo sistema;
+\item Disponibilização de todas as ordens de um cliente;
+\item Disponibilização de todas as ordens por executar;
+\item Disponibilização de todos tipos de ação suportados pelo sistema;
 \item Disponibilização de todas as moedas suportadas pelo sistema;
 \item Conversão da moeda do utilizador para a do serviço bolsista (USD) e vice-versa.
 \end{itemize}
@@ -98,28 +98,34 @@ O sistema foi desenvolvido com o intuito de consolidar os conceitos abordados na
 
 \section{Arquitetura}
 
-[Inserir diagrama UML]
+\includegraphics[width=\textwidth]{Server.png}
+
+\includegraphics[width=\textwidth]{Client.png}
+
+\includegraphics[width=\textwidth]{StockBroker.png}
+
+\includegraphics[width=\textwidth]{WebSite.png}
 
 
 \chapter{Implementação}
 
 \section{GUI App}
 
-A GUI App foi implementada através de uma aplicação realizada em C\# .NET 4.0 através de Window Forms foi nos possível criar toda a interface da aplicação com o utilizador. Desta forma foi adicionada a referência web do serviço disponibilizado pelo servidor através de wsHttpBinding sendo todos as funções realizadas através da utilização de uma proxy criada para este serviço.\\
+A GUI App foi implementada através de uma aplicação realizada em C\# .NET 4.0 e através de Window Forms criamos toda a interface da aplicação com o utilizador. Foi adicionada a referência web do serviço disponibilizado pelo servidor através de wsHttpBinding sendo todos as funções realizadas através da utilização de uma proxy criada para este serviço, de forma transparente pelo WCF.\\
 
 \section{Website}
 
-O Website foi implementado utilizando ASP .NET, JavaScript e CSS desta forma foi nos possível realizar de forma simples a ligação do site com o servidor assim como a criação de toda a interface com o utilizador de forma intuitiva e elegante.
+O Website foi implementado utilizando ASP .NET, JavaScript e CSS. Assim foi nos possível realizar de forma simples a ligação do site com o servidor assim como a criação de toda a interface com o utilizador de forma intuitiva e elegante.
 
 \section{Servidor}
 
-Para o Servidor foi criado um serviço web com uma interface de forma a tornar intuitiva a utilização de todos os serviços disponibilizados. Com o objetivo de toda a informação ser guardada de forma consistente e persistente o Servidor possui uma base de dados utilizando a tecnologia SQL Server onde guarda toda a informação. O Servidor também possui uma referência para o serviço bolsista de forma a poder invocar métodos que se encontrem na sua interface.
+Para o Servidor foi criado um serviço web WCF. Com o objetivo de toda a informação ser guardada de forma consistente e persistente o Servidor possui uma base de dados utilizando a tecnologia SQL Server onde guarda toda a informação. O Servidor também possui uma referência para o serviço bolsista de forma a poder invocar métodos que se encontrem na sua interface.
 
 \pagebreak
 
 \section{Serviço Bolsista}
 
-Assim como o servidor o Serviço Bolsista possui um serviço web com uma interface de forma a poder receber pedidos do servidor através da sua ligação que é feita através de uma netMsmqBinding que permite que os pedidos fiquem guardados quando este serviço se encontre desligado. Este serviço também possui uma base de dados (SQL Server) para guardar toda a informação de forma persistente.
+Assim como o Servidor, o Serviço Bolsista possui um serviço web com uma interface de forma a poder receber pedidos do servidor através da sua ligação que é feita através de uma fila de mensagens que permite que os pedidos fiquem guardados quando este serviço se encontre desligado. Este serviço também possui uma base de dados (SQL Server) para guardar toda a informação de forma persistente.
 
 \chapter{Demonstração}
 
@@ -212,10 +218,10 @@ Email recebido pelo cliente:
 
 Este trabalho foi, sem dúvida, bastante enriquecedor, dado que nos permitiu explorar os conhecimentos transmitidos nas aulas\\
 
-Ao longo do desenvolvimento deparamo-nos com alguns desafios que tornaram o projecto aliciante e motivador: a criação dos protocolos de ligação entre os clientes e serviços, a utilização de serivços exteriores (Conversor de moeda) e a criação de um website atravé da utilização de um serviço web.\\
+Ao longo do desenvolvimento deparamo-nos com alguns desafios que tornaram o projeto aliciante e motivador: a criação dos protocolos de ligação entre os clientes e serviços, a utilização de serviços exteriores (Conversor de moeda) e a criação de um website através da utilização de um serviço web.\\
 
-Outro desafio que tivemos de enfrentar foram a escolha de novas funcionalidades a implementar no nosso sistema, uma vez que todo este ambiente económico não é do nosso melhor conhecimento.\\
+Outro desafio que tivemos de enfrentar foi a escolha de novas funcionalidades a implementar no nosso sistema, uma vez que não dominamos o meio onde esta aplicação se insere. Tornou-se por vezes interessante decidir que novas funcionalidades adicionar.\\
 
-Em conclusão este trabalho deu nos a oportunidade de aprofundar o nosso conhecimento nas várias tecnologias usadas assim como a criação de uma aplicação distribuida e a sua integração.\\
+Em conclusão este trabalho deu nos a oportunidade de aprofundar o nosso conhecimento nas várias tecnologias usadas assim como a criação de uma aplicação distribuída e a sua integração numa situação que simula o mundo real.\\
 
 \end{document}

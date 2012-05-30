@@ -4,13 +4,13 @@
 \contentsline {section}{\numberline {}Principais funcionalidades}{3}
 \contentsline {section}{\numberline {}Estrutura}{4}
 \contentsline {section}{\numberline {}Arquitetura}{4}
-\contentsline {chapter}{\numberline {}Implementa\c c\~ao}{5}
-\contentsline {section}{\numberline {}GUI App}{5}
-\contentsline {section}{\numberline {}Website}{5}
-\contentsline {section}{\numberline {}Servidor}{5}
-\contentsline {section}{\numberline {}Servi\c co Bolsista}{6}
-\contentsline {chapter}{\numberline {}Demonstra\c c\~ao}{7}
+\contentsline {chapter}{\numberline {}Implementa\c c\~ao}{7}
 \contentsline {section}{\numberline {}GUI App}{7}
-\contentsline {section}{\numberline {}Website}{8}
-\contentsline {section}{\numberline {}Servi\c co Bolsista}{9}
-\contentsline {chapter}{\numberline {}Conclus\~ao}{13}
+\contentsline {section}{\numberline {}Website}{7}
+\contentsline {section}{\numberline {}Servidor}{7}
+\contentsline {section}{\numberline {}Servi\c co Bolsista}{8}
+\contentsline {chapter}{\numberline {}Demonstra\c c\~ao}{9}
+\contentsline {section}{\numberline {}GUI App}{9}
+\contentsline {section}{\numberline {}Website}{10}
+\contentsline {section}{\numberline {}Servi\c co Bolsista}{11}
+\contentsline {chapter}{\numberline {}Conclus\~ao}{15}
