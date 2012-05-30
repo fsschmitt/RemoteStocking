@@ -101,5 +101,15 @@ namespace StockBroker
             System.Diagnostics.Process.Start("http://www.google.com/finance?q="+stock.sType);
         }
 
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+            if (lbStocks.SelectedIndex != -1 && txtPrice.Text != "")
+                btnExecute.Enabled = true;
+            else
+                btnExecute.Enabled = false;
+        }
+
+        
+
     }
 }

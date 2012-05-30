@@ -73,6 +73,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="StockBrokerDiagram.cd" />
     <None Include="Service References\ServerOps\item.xsd">
       <SubType>Designer</SubType>
     </None>

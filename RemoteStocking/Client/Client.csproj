@@ -73,6 +73,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ClientDiagram.cd" />
     <None Include="Properties\DataSources\Stock.datasource" />
     <None Include="Service References\ServerOps\item.xsd">
       <SubType>Designer</SubType>

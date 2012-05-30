@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
+    <None Include="WebSiteDiagram.cd" />
     <None Include="images\misc\Thumbs.db" />
     <None Include="images\orbit\Thumbs.db" />
     <None Include="Properties\DataSources\Stock.datasource" />

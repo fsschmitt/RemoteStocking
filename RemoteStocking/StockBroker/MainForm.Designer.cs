@@ -83,6 +83,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(104, 20);
             this.txtPrice.TabIndex = 4;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // btnExecute
