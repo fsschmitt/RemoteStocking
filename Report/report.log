@@ -1,24 +1,23 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  27 MAY 2012 23:13
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.5.11)  30 MAY 2012 12:55
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
 **report.tex
-(./report.tex
-LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
-c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
-h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
-h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
- icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
-iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
- lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
-ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
-ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
-.
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/report.cls
+
+(C:\Users\ZePedro\Dropbox\mieic\4-ano\2-semestre\TDIN\RemoteStocking\Report\rep
+ort.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size11.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -34,43 +33,49 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2008/07/06 v3.8l The Babel package
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
 
-(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/portuges.ldf
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\portuges.ldf"
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
-(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2008/07/06 v3.8l Babel common definitions
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
 Package babel Info: Making " an active character on input line 145.
 ))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/indentfirst.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/inputenc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/latin1.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2008/03/30 v1.1d Input encoding file
 ))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/fontenc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/titlepic/titlepic.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\titlepic\titlepic.sty"
 Package: titlepic 2009/08/03 1.1 Package to display a picture on the title page
 
 )
-(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.sty
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
@@ -87,38 +92,38 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \lst@lineno=\count94
 \lst@maxwidth=\dimen107
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/lstmisc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count95
 \lst@skipnumbers=\count96
 \lst@framebox=\box27
 )
-(/usr/local/texlive/2011/texmf-dist/tex/latex/listings/listings.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
 )
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count97
@@ -126,9 +131,8 @@ Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen108
 \Gin@req@width=\dimen109
 )
-(./report.aux)
-\openout1 = `report.aux'.
-
+(C:\Users\ZePedro\Dropbox\mieic\4-ano\2-semestre\TDIN\RemoteStocking\Report\rep
+ort.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
@@ -142,8 +146,7 @@ LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 \c@lstlisting=\count98
-
-(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count99
 \scratchdimen=\dimen110
@@ -156,54 +159,7 @@ LaTeX Font Info:    ... okay on input line 15.
 \MPnumerator=\count103
 \makeMPintoPDFobject=\count104
 \everyMPtoPDFconversion=\toks19
-) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
-))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
-
-(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-<feup.jpg, id=1, 331.2375pt x 100.2144pt>
+) <feup.jpg, id=1, 331.2375pt x 100.2144pt>
 File: feup.jpg Graphic file (type jpg)
  <use feup.jpg>
 Package pdftex.def Info: feup.jpg used on input line 24.
@@ -216,12 +172,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 30.
  [1
 
-{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./feup.
-jpg>] (./report.toc)
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/ZePedro/Dropbox/
+mieic/4-ano/2-semestre/TDIN/RemoteStocking/Report/feup.jpg>]
+(C:\Users\ZePedro\Dropbox\mieic\4-ano\2-semestre\TDIN\RemoteStocking\Report\rep
+ort.toc)
 \tf@toc=\write3
-\openout3 = `report.toc'.
-
-[1
+ [1
 
 ]
  .
@@ -235,13 +191,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 ]
  .
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 70.
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 70.
 
-<estrutura.png, id=22, 1044.90375pt x 606.265pt>
+<estrutura.png, id=21, 1044.90375pt x 606.265pt>
 File: estrutura.png Graphic file (type png)
  <use estrutura.png>
 Package pdftex.def Info: estrutura.png used on input line 97.
@@ -253,7 +209,8 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 96--98
 
 [3
 
-] [4 <./estrutura.png>]
+] [4 <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/RemoteStocking/Repor
+t/estrutura.png>]
  .
 
 Underfull \hbox (badness 10000) in paragraph at lines 108--109
@@ -264,7 +221,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
 ] [6]
  .
-<Client1.jpg, id=39, 522.45187pt x 270.25969pt>
+<Client1.jpg, id=38, 522.45187pt x 270.25969pt>
 File: Client1.jpg Graphic file (type jpg)
  <use Client1.jpg>
 Package pdftex.def Info: Client1.jpg used on input line 131.
@@ -274,7 +231,7 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 130--132
 [][] 
  []
 
-<Client2.jpg, id=40, 522.45187pt x 268.75406pt>
+<Client2.jpg, id=39, 522.45187pt x 268.75406pt>
 File: Client2.jpg Graphic file (type jpg)
  <use Client2.jpg>
 Package pdftex.def Info: Client2.jpg used on input line 138.
@@ -286,7 +243,9 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 137--139
 
 [7
 
- <./Client1.jpg> <./Client2.jpg>] <Web.png, id=44, 1084.05pt x 677.53125pt>
+ <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/RemoteStocking/Report/Cl
+ient1.jpg> <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/RemoteStocking
+/Report/Client2.jpg>] <Web.png, id=43, 1084.05pt x 677.53125pt>
 File: Web.png Graphic file (type png)
 
 <use Web.png>
@@ -297,7 +256,7 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 145--147
 [][] 
  []
 
-<Web1.png, id=45, 1084.05pt x 677.53125pt>
+<Web1.png, id=44, 1084.05pt x 677.53125pt>
 File: Web1.png Graphic file (type png)
  <use Web1.png>
 Package pdftex.def Info: Web1.png used on input line 153.
@@ -307,10 +266,11 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 152--154
 [][] 
  []
 
-[8 <./Web.png> <./Web1.png>] <Web2.png, id=49, 1084.05pt x 677.53125pt>
+[8 <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/RemoteStocking/Report/
+Web.png> <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/RemoteStocking/R
+eport/Web1.png>] <Web2.png, id=48, 1084.05pt x 677.53125pt>
 File: Web2.png Graphic file (type png)
-
-<use Web2.png>
+ <use Web2.png>
 Package pdftex.def Info: Web2.png used on input line 160.
 (pdftex.def)             Requested size: 360.0pt x 225.00233pt.
 
@@ -318,7 +278,7 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 159--161
 [][] 
  []
 
-<StockBroker.jpg, id=50, 371.13657pt x 226.59656pt>
+<StockBroker.jpg, id=49, 371.13657pt x 226.59656pt>
 File: StockBroker.jpg Graphic file (type jpg)
  <use StockBroker.jpg>
 Package pdftex.def Info: StockBroker.jpg used on input line 167.
@@ -328,10 +288,12 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 166--168
 [][] 
  []
 
-[9 <./Web2.png> <./StockBroker.jpg>]
-<StockBroker1.png, id=54, 370.38374pt x 223.58531pt>
+[9 <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/RemoteStocking/Report/
+Web2.png> <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/RemoteStocking/
+Report/StockBroker.jpg>] <StockBroker1.png, id=53, 370.38374pt x 223.58531pt>
 File: StockBroker1.png Graphic file (type png)
- <use StockBroker1.png>
+
+<use StockBroker1.png>
 Package pdftex.def Info: StockBroker1.png used on input line 174.
 (pdftex.def)             Requested size: 360.0pt x 217.32098pt.
 
@@ -339,7 +301,7 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 173--175
 [][] 
  []
 
-<SearchResult.png, id=55, 1084.05pt x 677.53125pt>
+<SearchResult.png, id=54, 1084.05pt x 677.53125pt>
 File: SearchResult.png Graphic file (type png)
  <use SearchResult.png>
 Package pdftex.def Info: SearchResult.png used on input line 181.
@@ -349,8 +311,10 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 180--182
 [][] 
  []
 
-[10 <./StockBroker1.png> <./SearchResult.png>]
-<StockBroker3.jpg, id=59, 368.87813pt x 224.33812pt>
+[10 <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/RemoteStocking/Report
+/StockBroker1.png> <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/Remote
+Stocking/Report/SearchResult.png>]
+<StockBroker3.jpg, id=58, 368.87813pt x 224.33812pt>
 File: StockBroker3.jpg Graphic file (type jpg)
  <use StockBroker3.jpg>
 Package pdftex.def Info: StockBroker3.jpg used on input line 188.
@@ -360,7 +324,7 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 187--189
 [][] 
  []
 
-<StockBroker4.jpg, id=60, 369.63094pt x 225.09094pt>
+<StockBroker4.jpg, id=59, 369.63094pt x 225.09094pt>
 File: StockBroker4.jpg Graphic file (type jpg)
  <use StockBroker4.jpg>
 Package pdftex.def Info: StockBroker4.jpg used on input line 195.
@@ -370,8 +334,10 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 194--196
 [][] 
  []
 
-[11 <./StockBroker3.jpg> <./StockBroker4.jpg>]
-<emailNotification.png, id=64, 229.60782pt x 93.34875pt>
+[11 <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/RemoteStocking/Report
+/StockBroker3.jpg> <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/Remote
+Stocking/Report/StockBroker4.jpg>]
+<emailNotification.png, id=63, 229.60782pt x 93.34875pt>
 File: emailNotification.png Graphic file (type png)
 
 <use emailNotification.png>
@@ -382,7 +348,7 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 201--203
 [][] 
  []
 
-<email.jpg, id=65, 670.00313pt x 181.42781pt>
+<email.jpg, id=64, 670.00313pt x 181.42781pt>
 File: email.jpg Graphic file (type jpg)
  <use email.jpg>
 Package pdftex.def Info: email.jpg used on input line 209.
@@ -392,7 +358,9 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 208--210
 [][] 
  []
 
-[12 <./emailNotification.png> <./email.jpg>]
+[12 <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/RemoteStocking/Report
+/emailNotification.png> <C:/Users/ZePedro/Dropbox/mieic/4-ano/2-semestre/TDIN/R
+emoteStocking/Report/email.jpg>]
  .
 
 Underfull \hbox (badness 10000) in paragraph at lines 213--214
@@ -416,32 +384,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
 [13
 
-] (./report.aux) ) 
+]
+(C:\Users\ZePedro\Dropbox\mieic\4-ano\2-semestre\TDIN\RemoteStocking\Report\rep
+ort.aux) ) 
 Here is how much of TeX's memory you used:
- 3519 strings out of 493633
- 48651 string characters out of 3143378
- 104691 words of memory out of 3000000
- 6757 multiletter control sequences out of 15000+200000
+ 3191 strings out of 494045
+ 42792 string characters out of 3148381
+ 95574 words of memory out of 3000000
+ 6451 multiletter control sequences out of 15000+200000
  17499 words of font info for 38 fonts, out of 3000000 for 9000
- 831 hyphenation exceptions out of 8191
- 37i,5n,32p,478b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/
-cm-super-t1.enc}</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/
-sfbx1095.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sf
-bx1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfbx
-1440.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfbx24
-88.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfcc0800
-.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfcc1095.p
-fb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb
-></usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr
-/local/texlive/2011/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on report.pdf (14 pages, 1405290 bytes).
+ 715 hyphenation exceptions out of 8191
+ 27i,5n,32p,478b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\ZePedro\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx1200.pk> <C:\Users\ZePedro\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
+ur\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\ZePedro\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\ZePedro\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\ZePedro\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\User
+s\ZePedro\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.
+pk> <C:\Users\ZePedro\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
+00\ecti1095.pk> <C:\Users\ZePedro\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\eccc1728.pk> <C:\Users\ZePedro\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\jknappen\ec\dpi600\eccc0800.pk> <C:\Users\ZePedro\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk> <C:\Users\ZePedro\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report.pdf (14 pages, 1355226 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 356 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
