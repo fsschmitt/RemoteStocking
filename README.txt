@@ -10,7 +10,7 @@ To run correctly this project you need:
 1. Create in your system a MSMQ private queue named "stockbroker”.
 
 2. Create the Database required options:
-	2.1 Create the database manually
+	2.1 Create the database manually (StockTransaction SQL Script file is on root folder (StockTransactionScript.sql))
 
 		2.1.1 Create a Database for Server: A database implemented in SQLServer 2010 Express and named 'ServerDB' must
 		exist. The database should have a table named 'StockTransaction' with the following columns:
