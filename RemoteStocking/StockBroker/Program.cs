@@ -9,7 +9,7 @@ namespace StockBroker
 {
     class Program
     {
-        public static bool Debug = true;
+        public static bool Debug = false;
         public static MainForm mf;
         private static ServiceHost host;
 
