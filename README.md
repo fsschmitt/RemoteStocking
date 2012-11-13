@@ -7,4 +7,4 @@ Website:
 
 ![](http://github.com/fsschmitt/RemoteStocking/raw/master/screen.png) 
 
-![](https://github.com/fsschmitt/RemoteStocking/blob/master/Report/StockBroker.png) 
+![](https://github.com/fsschmitt/RemoteStocking/raw/master/Report/StockBroker.png) 
