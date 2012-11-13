@@ -9,7 +9,7 @@ Website:
 
 Web Structure:
 
-![](https://github.com/fsschmitt/RemoteStocking/raw/master/Report/Web.png)
+![](https://github.com/fsschmitt/RemoteStocking/raw/master/Report/WebSite.png)
 
 Client version:
 
